@@ -1,4 +1,4 @@
-<button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+<button mat-button [matMenuTriggerFor]="animals" mat-raised-button color="accent">Animal index</button>
 
 <mat-menu #animals="matMenu">
   <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
@@ -46,7 +46,7 @@
   <button mat-menu-item disabled>Velociraptor</button>
 </mat-menu>
 
-<button mat-button [matMenuTriggerFor]="pet">Pet index</button>
+<button mat-button [matMenuTriggerFor]="pet" mat-raised-button color="accent">Pet index</button>
 
 <mat-menu #pet="matMenu">
   <button mat-menu-item [matMenuTriggerFor]="pet1">Dog</button>
