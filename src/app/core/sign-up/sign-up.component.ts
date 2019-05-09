@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  username: string;
+  password: string;
 
   ngOnInit() {
+  }
+
+  signup() : void {
+    if(this.username !== '' && this.password !== ''){
+      this.router.navigate(["login"]);
+     }else {
+       alert("Please fill all fields");
+     }
   }
 
 }
